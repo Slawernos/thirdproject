@@ -6,6 +6,7 @@ body {
   position: fixed;
   width: 100%;
   top: 30%;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

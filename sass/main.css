@@ -4,8 +4,17 @@ body {
 
 .fa-sync-alt {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
   -webkit-animation: loading 3s ease-in-out 0.0s forwards;
           animation: loading 3s ease-in-out 0.0s forwards;
@@ -31,6 +40,7 @@ body {
     opacity: 0;
     -webkit-transform: rotate(6turn);
             transform: rotate(6turn);
+    z-index: -1;
   }
 }
 
@@ -53,6 +63,7 @@ body {
     opacity: 0;
     -webkit-transform: rotate(6turn);
             transform: rotate(6turn);
+    z-index: -1;
   }
 }
 /*# sourceMappingURL=main.css.map */

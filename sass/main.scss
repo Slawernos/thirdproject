@@ -5,9 +5,11 @@ body {
 
 .fa-sync-alt{
     position: fixed;
-    top:50%;
-    left: 50%;
-
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     animation: loading 3s ease-in-out 0.0s forwards;
     font-size: 50px;
@@ -31,6 +33,7 @@ body {
     95%{
         opacity: 0;
         transform: rotate(6turn);
+        z-index: -1;
     }
     
 }

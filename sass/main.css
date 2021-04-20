@@ -377,4 +377,8 @@ body {
   font-family: Roboto;
   z-index: 0;
 }
+
+a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=main.css.map */

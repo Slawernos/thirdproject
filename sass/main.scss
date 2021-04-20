@@ -1,40 +1,18 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/keyframes';
+@import './elements/loading_icon';
+@import './pages/home';
+
+
 body {
-    background-color: aqua;
+    min-width: 300px;
+    margin: 0;
+    position: relative;
 }
-
-
-.fa-sync-alt{
-    position: fixed;
-    width: 100%;
-    top:30%;
-    left:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    animation: loading 3s ease-in-out 0.0s forwards;
-    font-size: 50px;
-    
-
-}
-
-@keyframes loading {
-    10%{
-        opacity: 0.1;
-        transform: rotate(0.1turn);
-    }
-
-    20%{
-        transform: rotate(0.5turn);
-    }
-    80%{
-        transform: rotate(5turn);
-        opacity: 1;
-    }
-    95%{
-        opacity: 0;
-        transform: rotate(6turn);
-        z-index: -1;
-    }
+*{
+    box-sizing: border-box;
+    font-family: Roboto;
+    z-index: 0;
     
 }

@@ -1,0 +1,21 @@
+.fa-sync-alt{
+    @include flexcenter();
+    position: fixed;
+    width: 100%;
+    top:30%;
+    left:0;
+    opacity: 0;
+    animation: loading $loadingtime ease-in-out 0.0s forwards;
+    font-size: 150px;
+    z-index: 999;
+}
+
+.cover{
+     animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
+        position: absolute;
+        background-color: white;
+        z-index:33;
+        top:0;
+        width: 100%;
+        height:100%;
+}

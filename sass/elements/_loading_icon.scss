@@ -11,7 +11,7 @@
 }
 
 .cover{
-     animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
+        animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
         position: absolute;
         background-color: white;
         z-index:33;

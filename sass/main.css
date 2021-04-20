@@ -269,6 +269,8 @@
 }
 
 .imagebox {
+  position: relative;
+  z-index: 0;
   overflow: hidden;
   max-width: 600px;
   border-radius: 1rem 1rem;
@@ -279,7 +281,7 @@
   margin-bottom: 30px;
 }
 
-.imagebox > img {
+.imagebox__img {
   width: 100%;
   height: 70%;
   overflow: hidden;
@@ -313,7 +315,6 @@
 }
 
 .fas.fa-heart {
-  position: absolute;
   color: #9356DC;
   z-index: 999;
   opacity: 0;
@@ -329,6 +330,20 @@
   opacity: 1;
 }
 
+.heartcheck {
+  position: absolute;
+  z-index: -999;
+  opacity: 0;
+}
+
+.heartcheck:checked + label i {
+  opacity: 1;
+}
+
+.heartcheckbox {
+  position: absolute;
+}
+
 .footerdiv {
   background-color: #353535;
   color: white;
@@ -341,7 +356,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 600px;
 }
 
 .footerdiv > img {
@@ -367,7 +381,8 @@
 
 body {
   min-width: 300px;
-  margin: 0;
+  max-width: 850px;
+  margin: 0 auto;
   position: relative;
 }
 

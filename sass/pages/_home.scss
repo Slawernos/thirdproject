@@ -1,14 +1,4 @@
 
-.logo{
-    @include flexcenter();
-    width:100%;
-    & img{
-        width: 100%;
-        max-width: 600px;    
-        margin:auto;
-    }
-    padding: 20px;
-}
 
 .location{
     @include flexcenter();
@@ -157,27 +147,4 @@
     position: absolute;
     
 }
-.footerdiv{
-    background-color: $footercolor;
-    color: white;
-    width:100%;
-    display:flex;
-    padding:30px;
-    flex-direction: column;
-    &>img{
-        filter: invert(100%);
-        width: 100px;
-        margin-bottom: 20px;
-    }
-    &>a{
-        margin-top:10px;
-        text-decoration: none;
-        &:visited{
-            color:white;
-        }
-    }
-    & .fas{
-        width: 1rem;
-        margin-right: 10px;
-    }
-}
+

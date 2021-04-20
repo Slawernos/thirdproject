@@ -1,0 +1,10 @@
+.logo{
+    @include flexcenter();
+    width:100%;
+    & img{
+        width: 50%;
+        max-width: 600px;    
+        margin:auto;
+    }
+    padding: 20px;
+}

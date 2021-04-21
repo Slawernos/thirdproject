@@ -2,13 +2,16 @@
     width: 100%;
 
     & img{
-        max-width: 100%;
+        object-fit: cover;
+        width: 100%;
+        height:250px;
     }
 
 }
 
 .menu-container{
     padding-left:30px;
+    padding-right:30px;
     position: relative;
     margin-top:-30px;
     border-radius: 2rem 2rem 0 0;
@@ -17,9 +20,94 @@
     background-color: $color-lightgray;
 
     &__header{
-        
+        font-style: italic;
+        font-weight: bold;
         display: grid;
         grid-template-columns: 80% 20%;
 
         }
     }
+
+.container-foods{
+    display: grid;
+    grid-template-rows: 50px repeat(3,100px);
+    & div:nth-child(1)>p{
+
+        width: auto;
+        display: inline;
+        text-transform: uppercase;
+        position: relative;
+         &::after{
+            position: absolute;
+            left:0;
+            bottom:0;
+            transform:translateY(100%);
+            height: 3px;
+            content: '';
+            background-color: $color-tertiary;
+            width: 50%;
+            
+        }
+    }
+
+    &__item{
+        &:hover>&__checked{
+            transform: scaleX(1);
+            &>i{
+                transform:rotateY(1turn);
+            }
+        }
+        &:hover>&__price{
+                transform:translateX(-120%);
+        }
+        >b{
+            grid-area: a;
+        }
+        >p{
+            grid-area: b;
+            margin:10px 0 10px 0;
+            
+        }
+        overflow: hidden;
+        position: relative;
+        @include boxshadows;
+        display:grid;
+        grid-template-columns: 90% auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "a c"
+        "b c";
+        background-color: white;
+        height: 80%;
+        width: 100%;
+        border-radius: 1rem 1rem;
+        padding: 1rem;
+        &__price{
+            grid-area: c;
+            font-weight: bold;
+            @include flexcenter;
+            transition: transform 0.5s ease-in-out;
+        }
+        &__checked{
+            transform: scaleX(0);
+            content:"";
+            position: absolute;
+            @include flexcenter;
+            font-size: 25px;
+            color: white;
+            right:0;
+            width: 15%;
+            height: 100%;
+            background-color: $color-tertiary;
+            border-radius: 0 1rem 1rem 0;
+            transition: transform 0.5s ease-in-out;
+            transform-origin: 100% 0%;
+            &>i{
+                transform:rotateY(180deg);
+                transition: transform 1s ease-in-out;
+            }
+
+        }
+    }
+    
+}

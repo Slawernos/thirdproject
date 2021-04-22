@@ -1,6 +1,8 @@
 
 
 .location{
+    box-shadow:inset 0px 2px 5px 0px rgba(0,0,0,0.34);
+
     @include flexcenter();
     padding: 5px;
     width: 100%;
@@ -26,14 +28,7 @@
         display: inline-block;
     }
     &__button{
-        display:  inline-block;
-        margin:30px;
-        width:60%;
-        padding:25px;
-        color:white;
-        background-image: linear-gradient(to bottom right, #9356DC,#FF79DA) ;
-        border-style: none;
-        border-radius: 2rem 2rem;
+        @include buttonstyle;
         @include globalmaxwidth();
     }
 
@@ -41,11 +36,24 @@
 
 
 .how-div{
-    
+
     @include homevisistedfixer();
     display: flex;
     flex-direction: column;
     &__box{
+        &>i{
+            transition:color 0.5s ease-in-out , transform 0.5s ease-in-out;
+        }
+        &:hover > i{
+            color:$color-primary;
+            transform:scale(1.5) rotate(30deg);
+ 
+        }
+        &:hover{
+            color:$color-primary;
+        }
+        transition:color 0.5s ease-in-out;
+        $radius: 1.5rem 1.5rem;
         @include boxshadows();
         background-color: $color-darkgrey;
         width: 85%;
@@ -55,6 +63,7 @@
         border-radius: 1.5rem 1.5rem;
         position: relative;
         max-width: 600px;
+        @include boxshadows-light($radius);
     }
     &__nmbr{
         display: inline-block;
@@ -87,18 +96,22 @@
 }
 
 .imagebox{
+    $radius:1rem 1rem;
+    @include boxshadows;
     position: relative;
     z-index: 0;
-    overflow: hidden;
-    @include globalmaxwidth;
+     @include globalmaxwidth;
     border-radius: 1rem 1rem;
     background-color: white;
     width: 90%;
     height:250px;
     margin:auto;
     margin-bottom: 30px;
+    @include boxshadows-light($radius);
+
 
     &__img{
+        border-radius: 1rem 1rem 0 0;
         width: 100%;
         height: 70%;
         overflow: hidden;

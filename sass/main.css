@@ -300,7 +300,7 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .how-div__box:active::after {
+  .how-div__box:focus::after {
     opacity: 1;
   }
 }
@@ -388,7 +388,7 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .imagebox:active::after {
+  .imagebox:focus::after {
     opacity: 1;
   }
 }
@@ -681,7 +681,7 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .container-foods-one__item:active::after {
+  .container-foods-one__item:focus::after {
     opacity: 1;
   }
 }
@@ -891,7 +891,7 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .container-foods-two__item:active::after {
+  .container-foods-two__item:focus::after {
     opacity: 1;
   }
 }
@@ -1101,7 +1101,7 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .container-foods-three__item:active::after {
+  .container-foods-three__item:focus::after {
     opacity: 1;
   }
 }

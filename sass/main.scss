@@ -6,7 +6,14 @@
 @import './elements/footer';
 @import './elements/logo';
 @import './pages/menus';
-
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: 'Shrikhand';
+    src: url('/fonts/Shrikhand-Regular.ttf');
+}
 
 body {
     min-width: 300px;

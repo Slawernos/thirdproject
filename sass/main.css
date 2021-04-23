@@ -568,11 +568,19 @@
       grid-template-columns: 80% 20%;
 }
 
+.menu-container__header > h1 {
+  font-family: Shrikhand;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .container-foods-one {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 50px (100px)[3];
       grid-template-rows: 50px repeat(3, 100px);
+  grid-auto-rows: 100px;
 }
 
 .container-foods-one div:nth-child(1) {
@@ -660,6 +668,14 @@
           animation: menu-items 1.8s ease-in-out 0s forwards;
 }
 
+.container-foods-one__item:nth-of-type(5) {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-animation: menu-items 2s ease-in-out 0s forwards;
+          animation: menu-items 2s ease-in-out 0s forwards;
+}
+
 .container-foods-one__item::after {
   content: '';
   z-index: -1;
@@ -706,6 +722,10 @@
           transform: translateX(-120%);
 }
 
+.container-foods-one__item:hover > b, .container-foods-one__item:hover > p {
+  width: 80%;
+}
+
 .container-foods-one__item > b {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -717,6 +737,16 @@
   -ms-grid-column: 1;
   grid-area: b;
   margin: 10px 0 10px 0;
+}
+
+.container-foods-one__item > b, .container-foods-one__item > p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .container-foods-one__item__price {
@@ -783,6 +813,7 @@
   display: grid;
   -ms-grid-rows: 50px (100px)[3];
       grid-template-rows: 50px repeat(3, 100px);
+  grid-auto-rows: 100px;
 }
 
 .container-foods-two div:nth-child(1) {
@@ -870,6 +901,14 @@
           animation: menu-items 1.8s ease-in-out 0.5s forwards;
 }
 
+.container-foods-two__item:nth-of-type(5) {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-animation: menu-items 2s ease-in-out 0.5s forwards;
+          animation: menu-items 2s ease-in-out 0.5s forwards;
+}
+
 .container-foods-two__item::after {
   content: '';
   z-index: -1;
@@ -916,6 +955,10 @@
           transform: translateX(-120%);
 }
 
+.container-foods-two__item:hover > b, .container-foods-two__item:hover > p {
+  width: 80%;
+}
+
 .container-foods-two__item > b {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -927,6 +970,16 @@
   -ms-grid-column: 1;
   grid-area: b;
   margin: 10px 0 10px 0;
+}
+
+.container-foods-two__item > b, .container-foods-two__item > p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .container-foods-two__item__price {
@@ -993,6 +1046,7 @@
   display: grid;
   -ms-grid-rows: 50px (100px)[3];
       grid-template-rows: 50px repeat(3, 100px);
+  grid-auto-rows: 100px;
 }
 
 .container-foods-three div:nth-child(1) {
@@ -1080,6 +1134,14 @@
           animation: menu-items 1.8s ease-in-out 1s forwards;
 }
 
+.container-foods-three__item:nth-of-type(5) {
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
+  opacity: 0;
+  -webkit-animation: menu-items 2s ease-in-out 1s forwards;
+          animation: menu-items 2s ease-in-out 1s forwards;
+}
+
 .container-foods-three__item::after {
   content: '';
   z-index: -1;
@@ -1126,6 +1188,10 @@
           transform: translateX(-120%);
 }
 
+.container-foods-three__item:hover > b, .container-foods-three__item:hover > p {
+  width: 80%;
+}
+
 .container-foods-three__item > b {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
@@ -1137,6 +1203,16 @@
   -ms-grid-column: 1;
   grid-area: b;
   margin: 10px 0 10px 0;
+}
+
+.container-foods-three__item > b, .container-foods-three__item > p {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-transition: width 0.5s ease-in-out;
+  transition: width 0.5s ease-in-out;
+  text-overflow: ellipsis;
+  margin: 0;
 }
 
 .container-foods-three__item__price {
@@ -1256,6 +1332,16 @@
 
 .orderbutton__button:hover::before {
   opacity: 1;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url("/fonts/Shrikhand-Regular.ttf");
 }
 
 body {

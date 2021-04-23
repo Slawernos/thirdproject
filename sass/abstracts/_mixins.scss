@@ -97,6 +97,7 @@
         }
         display: grid;
         grid-template-rows: 50px repeat(3,100px);
+        grid-auto-rows: 100px;
         & div:nth-child(1)>p{
     
             width: auto;
@@ -118,7 +119,7 @@
     
         &__item{
             
-            @for $i from 0 to 5{
+            @for $i from 0 to 6{
                 &:nth-of-type(#{$i}){
                     transform: translateY(25px);
                     opacity: 0;
@@ -130,6 +131,7 @@
             @include boxshadows-light($radius);
             &:hover{
                 box-shadow: unset;
+                
             }
             &:hover>&__checked{
                 
@@ -139,17 +141,29 @@
                 }
             }
             &:hover>&__price{
-                    transform:translateX(-120%);
+                     transform:translateX(-120%);
+            }
+            &:hover>b , &:hover>p {          
+               width:80%;
             }
             >b{
                 grid-area: a;
+                
             }
             >p{
                 grid-area: b;
                 margin:10px 0 10px 0;
                 
             }
-            // overflow: hidden;
+            &>b,&>p{
+                width:100%;
+                overflow: hidden;
+                white-space: nowrap;
+                transition: width 0.5s ease-in-out;
+                text-overflow: ellipsis;
+                margin:0;
+
+            } 
             position: relative;
             @include boxshadows;
             display:grid;

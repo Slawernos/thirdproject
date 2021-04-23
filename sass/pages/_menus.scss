@@ -24,7 +24,12 @@
         font-weight: bold;
         display: grid;
         grid-template-columns: 80% 20%;
-
+        &>h1{
+            font-family: Shrikhand;
+            overflow: hidden;
+            white-space:nowrap;
+            text-overflow: ellipsis;
+        }
         }
     }
 $delay:0s;

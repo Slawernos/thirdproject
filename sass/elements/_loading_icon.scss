@@ -13,7 +13,9 @@
 .cover{
        animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
         position: absolute;
-        @include flexcenter();
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: white;
         z-index:33;
         top:0;
@@ -21,7 +23,11 @@
         height:100%;
 }
 
-
+.loading-plane{
+    @include flexcenter;
+    position: relative;
+    margin-top: 200px;
+}
 
 .fas.fa-spinner{
     margin-top:-100%;

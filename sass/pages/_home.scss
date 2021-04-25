@@ -1,4 +1,9 @@
 
+.loading-plane{
+    @include flexcenter;
+    position: relative;
+    margin-top: -100%;
+}
 
 .location{
     box-shadow:inset 0px 2px 5px 0px rgba(0,0,0,0.34);
@@ -92,6 +97,15 @@
     flex-direction: column;
     height: auto;
     justify-content: space-between;
+    @media only screen and (min-width: 500px){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        & >p {
+            
+            grid-column: 1/3;
+        }
+        
+    }
 
 }
 
@@ -165,4 +179,5 @@
     position: absolute;
     
 }
+
 

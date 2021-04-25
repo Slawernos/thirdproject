@@ -46,3 +46,49 @@
     }
     
 }
+
+@keyframes loading-cover {
+    0%{
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%);
+    }
+        
+        
+        
+    
+    100%{
+        transform: translateX(-50%) translateY(-50%) rotate(6turn);
+        
+    }
+    
+}
+@mixin keyframe($startdeg,$name,$progress){
+@keyframes beta-spinner-loader-#{$name}{
+        $percent:1%+$progress;
+        0%{ 
+            opacity:1;
+            transform: rotate($startdeg);
+        }
+        5%{
+            transform:rotate($startdeg+315deg);
+        }
+        20%{
+            transform:rotate($startdeg+675deg);
+        }
+        40%{
+            transform:rotate($startdeg+1035deg);
+        }
+        100%{
+            transform:rotate($startdeg+7turn);
+        }
+
+    
+    }
+    
+}
+@for $i from 1 to 6 {
+    $rotate:45deg*$i;
+    $percent-state:$i;
+    $name:map-get($loading-element,$i);
+    @include keyframe($rotate,$name,$percent-state);    
+}

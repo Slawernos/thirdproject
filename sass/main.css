@@ -784,7 +784,11 @@
 }
 
 .fas.fa-heart {
-  color: #9356DC;
+  -webkit-transform: translateY(1px) scale(1.05);
+          transform: translateY(1px) scale(1.05);
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   z-index: 999;
   opacity: 0;
   -webkit-transition: opacity ease-in-out 0.5s;

@@ -68,18 +68,14 @@
         0%{ 
             opacity:1;
             transform: rotate($startdeg);
+         }
+        60%{
+            transform:rotate($startdeg+1turn);
         }
-        5%{
-            transform:rotate($startdeg+315deg);
-        }
-        20%{
-            transform:rotate($startdeg+675deg);
-        }
-        40%{
-            transform:rotate($startdeg+1035deg);
-        }
+
         100%{
-            transform:rotate($startdeg+7turn);
+            transform:rotate(2turn+$startdeg);
+            opacity:1;
         }
 
     
@@ -87,7 +83,7 @@
     
 }
 @for $i from 1 to 6 {
-    $rotate:45deg*$i;
+    $rotate:40deg*$i;
     $percent-state:$i;
     $name:map-get($loading-element,$i);
     @include keyframe($rotate,$name,$percent-state);    

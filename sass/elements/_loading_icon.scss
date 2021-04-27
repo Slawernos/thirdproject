@@ -11,7 +11,7 @@
 }
 
 .cover{
-       animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
+        animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -55,8 +55,8 @@
     position: absolute;
     @each $key,$value in $loading-element {
         &.#{$value}{
-            $delay:0.3s*$key;
-            animation: beta-spinner-loader-#{$value} 5s linear $delay 1 forwards;
+            $delay:-0.05s*$key;
+            animation: beta-spinner-loader-#{$value} 1.5s cubic-bezier(.83,.12,.83,.67) $delay 2 backwards;
             opacity: 0;
         }
     }

@@ -62,9 +62,11 @@
     }
     
 }
+
+//Keyframe for lading spinner
 @mixin keyframe($startdeg,$name,$progress){
 @keyframes beta-spinner-loader-#{$name}{
-        $percent:1%+$progress;
+
         0%{ 
             opacity:1;
             transform: rotate($startdeg);

@@ -1,0 +1,8 @@
+$delay:0s;
+@each $var,$class in $menu-element {
+    #{$class}{
+        @include food-elements($delay);
+        $delay:$delay+0.5;
+    }
+    
+}

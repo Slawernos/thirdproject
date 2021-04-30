@@ -1,0 +1,7 @@
+.orderbutton{
+    @include flexcenter;
+    &__button{
+        @include buttonstyle;
+    }
+    
+}

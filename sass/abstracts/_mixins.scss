@@ -1,3 +1,5 @@
+// easy centering item by flex
+
 @mixin flexcenter(){
 
     display: flex;
@@ -5,9 +7,12 @@
     justify-content: center;
 }
 
+// Normal drop shadow for any items
 @mixin boxshadows(){
     box-shadow: $shadow;
 }
+
+//Drop shadow effect 
 @mixin boxshadows-light($border-radius:1rem){
     &::after{
         content:'';
@@ -33,11 +38,11 @@
    
 }
 
-
+// global max width for items
 @mixin globalmaxwidth{
     max-width: 600px;
 }
-
+// Making anchors normal font / color
 @mixin homevisistedfixer(){
     &>a{
         text-decoration: none;
@@ -53,6 +58,8 @@
         font-size: 22px;
     }
 }
+
+//Button with hover effect and colors
 @mixin buttonstyle(){
     position: relative;
     display:  inline-block;
@@ -64,6 +71,7 @@
     border-style: none;
     border-radius: 2rem 2rem;
     &>span{
+        font-size: 18px;
         margin: 0;
         padding: 0;
         z-index: 2;
@@ -86,7 +94,7 @@
         opacity: 1;
         }
     }
-
+// Food elements Mixin for restaurant pages
     @mixin food-elements($delay:1){
         $time:1s;
         & div:nth-child(1){

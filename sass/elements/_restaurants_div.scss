@@ -1,0 +1,20 @@
+.restaurants{
+    @include homevisistedfixer();
+    width: 100%;
+    background-color: $color-darkgrey;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-between;
+    @media only screen and (min-width: 500px){
+        display: grid;
+        grid-template-columns: 50% 50%;
+        & >p {
+            
+            grid-column: 1/3;
+        }
+        
+    }
+
+}
+

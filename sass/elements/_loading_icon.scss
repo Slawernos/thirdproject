@@ -1,15 +1,3 @@
-.fa-sync-alt{
-    @include flexcenter();
-    position: fixed;
-    width: 100%;
-    top:30%;
-    left:0;
-    opacity: 0;
-    animation: loading $loadingtime ease-in-out 0.0s forwards;
-    font-size: 150px;
-    z-index: 999;
-}
-
 .cover{
         animation: fadeinafterload $loadingtime ease-out $loadingtime forwards;
         position: absolute;
@@ -23,47 +11,22 @@
         height:100%;
 }
 
-.loading-plane{
-    @include flexcenter;
-    position: relative;
-    margin-top: 200px;
-}
 
-.fas.fa-spinner{
-    margin-top:-100%;
-    position: relative;
-    opacity: 0;
-    animation: loading $loadingtime linear 0.0s forwards;
-    transform-origin: 50% 50%;
-    font-size: 150px;
-    z-index: 999;
-    &::after{
-        content:'';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        animation: loading-cover $loadingtime linear 0.0s forwards;
-        transform-origin: 100% 100%;
-        left:0%;
-        background-color:white;
-        z-index: 1500;
-    }
-}
-
-
+//spinner with dots self made
 .beta-spinner{
-    position: absolute;
+    position: fixed;
+    @include flexcenter;
+    width:150px;
+    top:30%;
+    left:50%;
+    margin-left:-75px;
+    opacity: 0;
     @each $key,$value in $loading-element {
         &.#{$value}{
+            //delaying by minus seconds to make sure that the first element starts earlier and the rest behind them
             $delay:-0.05s*$key;
             animation: beta-spinner-loader-#{$value} 1.5s cubic-bezier(.83,.12,.83,.67) $delay 2 backwards;
             opacity: 0;
         }
-    }
-   
-    // $delay:0s;
-    // &.first{
-    // animation: beta-spinner-loader-first 1s linear $delay 3 forwards;
-    // }
-    
+    }   
 }

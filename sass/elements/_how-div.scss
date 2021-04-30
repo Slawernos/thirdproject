@@ -1,0 +1,49 @@
+.how-div{
+
+    @include homevisistedfixer();
+    display: flex;
+    flex-direction: column;
+    &__box{
+        &>i{
+            transition:color 0.5s ease-in-out , transform 0.5s ease-in-out;
+        }
+        &:hover > i{
+            color:$color-primary;
+            transform:scale(1.5) rotate(30deg);
+ 
+        }
+        &:hover{
+            color:$color-primary;
+        }
+        transition:color 0.5s ease-in-out;
+        $radius: 1.5rem 1.5rem;
+        @include boxshadows();
+        background-color: $color-darkgrey;
+        width: 85%;
+        margin: auto;
+        margin-bottom: 15px;
+        padding:25px;
+        border-radius: 1.5rem 1.5rem;
+        position: relative;
+        max-width: 600px;
+        @include boxshadows-light($radius);
+    }
+    &__nmbr{
+        display: inline-block;
+        position:absolute;
+        left:-2%;       
+        padding-left:0.5rem;
+        padding-top:0.2rem;
+        background-color: $color-primary;
+        color:white;
+        width:1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+
+    }
+    &__text{
+        padding-left:30px;
+    }
+
+}
+

@@ -1,0 +1,43 @@
+.heartholder{
+    position: relative;
+    @include flexcenter();
+    font-size: 30px;
+}
+.far.fa-heart{
+    z-index: -1;
+}
+.fas.fa-heart{
+    // color:$color-primary;
+    transform: scale(1.1) translateY(1px);
+    background: -webkit-linear-gradient($color-primary,$color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity ease-in-out 0.5s;
+    @media only screen and (min-width: 850px){
+        &:hover {
+            opacity: 1;
+            }
+        }
+    
+    &:active{
+        opacity: 1;
+
+    }
+
+}
+.heartcheck{
+    position: absolute;
+    z-index: -999;
+    opacity: 0;
+    &:checked + label i{
+        opacity: 1;
+    }
+}
+.heartcheckbox{
+    position: absolute;
+    
+}
+
+
